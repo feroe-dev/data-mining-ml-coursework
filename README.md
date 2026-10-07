@@ -2,13 +2,12 @@
 
 My coursework for **CS429 Data Mining** at the **University of Warwick** (Department of Computer Science, January–March 2021). The module covered classical machine learning (nearest neighbours, linear models, SVMs, PCA, model evaluation, clustering) and deep learning.
 
-The repository contains my solutions to the two graded assignments and a selection of lab exercises.
+The repository contains my solutions to the two graded assignments.
 
 | Project | Task | Methods |
 | --- | --- | --- |
 | [Assignment 1](assignment-1-image-classification/) | Binary image classification (28×28 images, labels ±1) | k-NN, preprocessing, PCA, kernel SVMs, stratified cross-validation, grid search |
 | [Assignment 2](assignment-2-cell-counting/) | Count six cell types in 256×256 RGB microscopy patches (multi-output regression) | Hand-crafted colour features (RGB and HED space), OLS, MLP (scikit-learn and Keras), SVR, CNNs with transfer learning (MobileNet) |
-| [Labs](labs/) | Weekly exercises | Nearest neighbours from scratch, SVM kernels, PCA and k-means |
 
 ## Assignment 1: Image classification
 
@@ -52,16 +51,6 @@ Results on the test fold. A higher Pearson correlation is better and a lower RMS
 The notebook's consolidation table also covers every feature, every model and a per-cell-type breakdown.
 
 **Data:** [`cell-data.npz`](https://warwick.ac.uk/fac/sci/dcs/teaching/material/cs909/cell-data.npz) (about 440 MB) comes from the module page and is not included here. The scripts for Question 2 also reload intermediate results from a local `dill` session file, `PickleAssignment2.db`, which is too large to include.
-
-## Labs
-
-- [`week-2-nearest-neighbour/`](labs/week-2-nearest-neighbour/): Euclidean distance, a 1-NN classifier and an accuracy function, implemented from scratch. Synthetic data came from a course-provided helper (`GVData.py`), which is not included.
-- [`week-3-svm-kernels/`](labs/week-3-svm-kernels/): decision boundaries of linear, polynomial and RBF SVMs as C, the degree and γ vary.
-- [`week-7-pca-clustering/`](labs/week-7-pca-clustering/): PCA projection and k-means clustering on the Iris dataset.
-
-| Linear SVM, C = 1000 | Polynomial kernel, d = 3 | RBF kernel, C = 1, γ = 1 |
-| --- | --- | --- |
-| ![](labs/week-3-svm-kernels/linear_C1000.png) | ![](labs/week-3-svm-kernels/poly_d3.png) | ![](labs/week-3-svm-kernels/rbf_C1_g1.png) |
 
 ## Setup
 
