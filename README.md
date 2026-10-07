@@ -4,30 +4,12 @@ My coursework for **CS429 Data Mining** at the **University of Warwick** (Depart
 
 The repository contains my solutions to the two graded assignments.
 
+**Assignment 2 is the more interesting one.** It works on real microscopy images and goes from hand-crafted features and classical regression all the way to a CNN with transfer learning, which more than doubled the explained variance (R² from 0.31 to 0.75). Assignment 1 is a solid but more standard classification exercise.
+
 | Project | Task | Methods |
 | --- | --- | --- |
-| [Assignment 1](assignment-1-image-classification/) | Binary image classification (28×28 images, labels ±1) | k-NN, preprocessing, PCA, kernel SVMs, stratified cross-validation, grid search |
 | [Assignment 2](assignment-2-cell-counting/) | Count six cell types in 256×256 RGB microscopy patches (multi-output regression) | Hand-crafted colour features (RGB and HED space), OLS, MLP (scikit-learn and Keras), SVR, CNNs with transfer learning (MobileNet) |
-
-## Assignment 1: Image classification
-
-[`assignment_1.ipynb`](assignment-1-image-classification/assignment_1.ipynb) is the notebook as submitted, with all outputs. Each `question_*.py` script holds the same code for one question. [`test_predictions.txt`](assignment-1-image-classification/test_predictions.txt) is the submitted prediction file for the unlabelled test set.
-
-1. **Data and metrics.** I explored the class balance (about 61% more positive than negative labels) and argued for AUC-PR over accuracy and AUC-ROC. I also derived the expected performance of a random classifier.
-2. **k-nearest neighbours.** 5-fold stratified cross-validation, the effect of preprocessing (standardisation, normalisation) and the choice of k.
-3. **Model comparison.** k-NN, perceptron, naive Bayes, logistic regression, and linear and kernelised SVMs, compared on accuracy, AUC-ROC and AUC-PR.
-4. **PCA.** Scree plot analysis: 315 components explain 95% of the variance. I then trained classifiers on the reduced data.
-5. **Final pipeline.** `StandardScaler → PCA → SVC` tuned with an 8-fold grid search over 360 configurations.
-
-Final model: RBF-kernel SVM on 144 principal components (C = 8, γ = 0.001, balanced class weights).
-
-| Metric (8-fold CV) | Mean | Std |
-| --- | --- | --- |
-| Accuracy | 0.846 | 0.013 |
-| AUC-ROC | 0.923 | 0.013 |
-| AUC-PR | 0.941 | 0.014 |
-
-**Data:** `Xtrain.txt` (3000 × 784), `Ytrain.txt` and `Xtest.txt` (3000 × 784) are included next to the scripts. They were provided by the module for the 2021 assignment.
+| [Assignment 1](assignment-1-image-classification/) | Binary image classification (28×28 images, labels ±1) | k-NN, preprocessing, PCA, kernel SVMs, stratified cross-validation, grid search |
 
 ## Assignment 2: Cell counting in microscopy images
 
@@ -51,6 +33,26 @@ Results on the test fold. A higher Pearson correlation is better and a lower RMS
 The notebook's consolidation table also covers every feature, every model and a per-cell-type breakdown.
 
 **Data:** [`cell-data.npz`](https://warwick.ac.uk/fac/sci/dcs/teaching/material/cs909/cell-data.npz) (about 440 MB) comes from the module page and is not included here. The scripts for Question 2 also reload intermediate results from a local `dill` session file, `PickleAssignment2.db`, which is too large to include.
+
+## Assignment 1: Image classification
+
+[`assignment_1.ipynb`](assignment-1-image-classification/assignment_1.ipynb) is the notebook as submitted, with all outputs. Each `question_*.py` script holds the same code for one question. [`test_predictions.txt`](assignment-1-image-classification/test_predictions.txt) is the submitted prediction file for the unlabelled test set.
+
+1. **Data and metrics.** I explored the class balance (about 61% more positive than negative labels) and argued for AUC-PR over accuracy and AUC-ROC. I also derived the expected performance of a random classifier.
+2. **k-nearest neighbours.** 5-fold stratified cross-validation, the effect of preprocessing (standardisation, normalisation) and the choice of k.
+3. **Model comparison.** k-NN, perceptron, naive Bayes, logistic regression, and linear and kernelised SVMs, compared on accuracy, AUC-ROC and AUC-PR.
+4. **PCA.** Scree plot analysis: 315 components explain 95% of the variance. I then trained classifiers on the reduced data.
+5. **Final pipeline.** `StandardScaler → PCA → SVC` tuned with an 8-fold grid search over 360 configurations.
+
+Final model: RBF-kernel SVM on 144 principal components (C = 8, γ = 0.001, balanced class weights).
+
+| Metric (8-fold CV) | Mean | Std |
+| --- | --- | --- |
+| Accuracy | 0.846 | 0.013 |
+| AUC-ROC | 0.923 | 0.013 |
+| AUC-PR | 0.941 | 0.014 |
+
+**Data:** `Xtrain.txt` (3000 × 784), `Ytrain.txt` and `Xtest.txt` (3000 × 784) are included next to the scripts. They were provided by the module for the 2021 assignment.
 
 ## Setup
 
