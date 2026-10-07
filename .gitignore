@@ -1,0 +1,16 @@
+# Data (see README for download links)
+*.npz
+*.db
+*.pkl
+*.pt
+X*.txt
+Y*.txt
+*.csv
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store

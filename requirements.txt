@@ -1,0 +1,9 @@
+numpy
+scipy
+pandas
+matplotlib
+scikit-learn
+scikit-image
+dill
+tensorflow==2.4.1
+tensorflow-addons
