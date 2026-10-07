@@ -1,11 +1,7 @@
-# Data (see README for download links)
+# Large data (see README for download links)
 *.npz
 *.db
 *.pkl
-*.pt
-X*.txt
-Y*.txt
-*.csv
 
 # Python / Jupyter
 __pycache__/

@@ -11,7 +11,7 @@ The repository contains my solutions to the two graded assignments.
 
 ## Assignment 1: Image classification
 
-[`assignment_1.ipynb`](assignment-1-image-classification/assignment_1.ipynb) is the submitted notebook. Each `question_*.py` script holds the same code for one question.
+[`assignment_1.ipynb`](assignment-1-image-classification/assignment_1.ipynb) is the notebook as submitted, with all outputs. Each `question_*.py` script holds the same code for one question. [`test_predictions.txt`](assignment-1-image-classification/test_predictions.txt) is the submitted prediction file for the unlabelled test set.
 
 1. **Data and metrics.** I explored the class balance (about 61% more positive than negative labels) and argued for AUC-PR over accuracy and AUC-ROC. I also derived the expected performance of a random classifier.
 2. **k-nearest neighbours.** 5-fold stratified cross-validation, the effect of preprocessing (standardisation, normalisation) and the choice of k.
@@ -27,11 +27,11 @@ Final model: RBF-kernel SVM on 144 principal components (C = 8, γ = 0.001, bala
 | AUC-ROC | 0.923 | 0.013 |
 | AUC-PR | 0.941 | 0.014 |
 
-**Data:** `Xtrain`, `Ytrain` and `Xtest` are published in the course repository [foxtrotmike/CS909](https://github.com/foxtrotmike/CS909/tree/master/assignment1). Save them as `Xtrain.txt`, `Ytrain.txt` and `Xtest.txt` next to the scripts.
+**Data:** `Xtrain.txt` (3000 × 784), `Ytrain.txt` and `Xtest.txt` (3000 × 784) are included next to the scripts. They were provided by the module for the 2021 assignment.
 
 ## Assignment 2: Cell counting in microscopy images
 
-[`assignment_2.ipynb`](assignment-2-cell-counting/assignment_2.ipynb) is the submitted notebook, and the `question_*.py` scripts hold the per-question code. Folds 1 and 2 are used for training and validation, and fold 3 for testing.
+[`assignment_2.ipynb`](assignment-2-cell-counting/assignment_2.ipynb) is the notebook as submitted, with all outputs, and the `question_*.py` scripts hold the per-question code. Folds 1 and 2 are used for training and validation, and fold 3 for testing.
 
 1. **Data analysis.** Per-fold statistics, cell-count distributions, and correlations between image features and cell counts.
 2. **Feature-based regression.** I extracted mean, variance and entropy from the haematoxylin (H) channel and the RGB channels, then compared OLS, MLPs and support vector regression.
@@ -62,4 +62,4 @@ pip install -r requirements.txt
 
 ## Notes
 
-The assignment specifications, lecture material and datasets belong to the University of Warwick and the module staff, so they are not included in this repository. The code is shown as it was submitted.
+The assignment specifications and lecture material belong to the University of Warwick and the module staff, so they are not included in this repository. The datasets were provided by the module. The code is shown as it was submitted.
