@@ -1,7 +1,10 @@
-# Large data (see README for download links)
+# Course data (not redistributed, see README)
 *.npz
 *.db
 *.pkl
+Xtrain.txt
+Ytrain.txt
+Xtest.txt
 
 # Python / Jupyter
 __pycache__/

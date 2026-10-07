@@ -56,7 +56,7 @@ Final model: RBF-kernel SVM on 144 principal components (C = 8, γ = 0.001, bala
 | AUC-ROC | 0.923 | 0.013 |
 | AUC-PR | 0.941 | 0.014 |
 
-**Data:** `Xtrain.txt` (3000 × 784), `Ytrain.txt` and `Xtest.txt` (3000 × 784) are included next to the scripts. They were provided by the module for the 2021 assignment.
+**Data:** the dataset (`Xtrain.txt`, `Ytrain.txt` and `Xtest.txt`, 3000 × 784 each) was provided by the module for the 2021 assignment and is not included in this repository. The notebook shows all results without it.
 
 ## Setup
 
