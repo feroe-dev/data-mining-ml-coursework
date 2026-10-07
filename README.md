@@ -56,11 +56,15 @@ Final model: RBF-kernel SVM on 144 principal components (C = 8, γ = 0.001, bala
 
 ## Setup
 
-The code was written in 2021 with Python 3.7, scikit-learn and TensorFlow 2.4.1.
+The code was written in 2021 with **Python 3.7**, scikit-learn and TensorFlow 2.4.1. TensorFlow 2.4.1 only supports Python 3.6–3.8, so use **Python 3.7** to run the notebooks. A newer Python cannot install it.
 
 ```bash
+conda create -n cs429 python=3.7
+conda activate cs429
 pip install -r requirements.txt
 ```
+
+You don't need to run anything to see the results: both notebooks are committed with all their outputs.
 
 ## Notes
 
