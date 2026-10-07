@@ -32,7 +32,11 @@ Results on the test fold. A higher Pearson correlation is better and a lower RMS
 
 The notebook's consolidation table also covers every feature, every model and a per-cell-type breakdown.
 
-**Data:** [`cell-data.npz`](https://warwick.ac.uk/fac/sci/dcs/teaching/material/cs909/cell-data.npz) (about 440 MB) comes from the module page and is not included here. The scripts for Question 2 also reload intermediate results from a local `dill` session file, `PickleAssignment2.db`, which is too large to include.
+**Data:** the dataset `cell-data.npz` (about 440 MB) is not included in this repository. Download it from the module page and place it next to the scripts:
+
+➡️ **Download:** <https://warwick.ac.uk/fac/sci/dcs/teaching/material/cs909/cell-data.npz>
+
+The scripts for Question 2 also reload intermediate results from a local `dill` session file, `PickleAssignment2.db`, which is too large to include.
 
 ## Assignment 1: Image classification
 
